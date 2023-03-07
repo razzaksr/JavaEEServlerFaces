@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <h:outputLabel value="Hello, world"/>
+    <h:form>
+        <h:inputText value="#{information.data}" />
+        <h:outputText value="#{information.data}" />
+    </h:form>
+    <h:form>
+        <h:inputText value="#{trainee.name}" />
+        <h:selectOneMenu value="#{trainee.skillset}">
+            <f:selectItem itemLabel="Java" itemValue="java" />
+            <f:selectItem itemLabel="Tesing" itemValue="test" />
+            <f:selectItem itemLabel="UI" itemValue="frontend" />
+        </h:selectOneMenu>
+        <h:commandButton value="Register" action="Page2Page-1.xhtml" />
+    </h:form>
+    <h:form>
+        <h:inputText value="#{trainee.name}" />
+        <h:selectOneRadio value="#{trainee.skillset}">
+            <f:selectItem itemLabel="Java" itemValue="java" />
+            <f:selectItem itemLabel="Tesing" itemValue="test" />
+            <f:selectItem itemLabel="UI" itemValue="frontend" />
+        </h:selectOneRadio>
+        <h:commandButton value="Register" action="Page2Page-1.xhtml" />
+    </h:form>
+    <br/><br/><br/><br/><br/><br/>
+    <h:form>
+        <h:inputText value="#{experience.name}" />
+        <h:selectManyCheckbox value="#{experience.project}">
+            <f:selectItem itemLabel="irctc" itemValue="irctc" />
+            <f:selectItem itemLabel="icici" itemValue="icici" />
+            <f:selectItem itemLabel="axis" itemValue="axis" />
+        </h:selectManyCheckbox>
+        <h:commandButton value="Insert" action="Page2Page-2.xhtml" />
+    </h:form>
+    <br/><br/><br/><br/><br/>
+    <h:form>
+        <h:inputText value="#{car.name}" />
+        <h:selectOneMenu value="#{car.selectedModel}">
+            <f:selectItems value="#{car.models}" />
+        </h:selectOneMenu>
+        <h:commandButton value="Choose" action="Page2Page-3.xhtml" />
+    </h:form>
+    <a href="DataBase.xhtml">DB</a>
+</f:view>
+</html>
